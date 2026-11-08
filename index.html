@@ -52,13 +52,20 @@
     <div class="photo"><img src="assets/images/intro-cargo-ship-dusk.jpg" alt=""></div>
   </div>
 
-  <button class="intro-skip" id="introSkip" type="button">Skip ›</button>
+  <button class="intro-skip" id="introSkip" type="button" data-i18n="skip">Skip ›</button>
 
   <div class="intro-content">
     <img class="intro-emblem" src="assets/globe-light.png" alt="Africontinent Global emblem">
     <div class="intro-word" id="introWord" aria-label="Africontinent">AFRICONTINENT</div>
     <div class="intro-global"><b>GLOBAL</b></div>
-    <p class="intro-tag">Connecting Markets<i>|</i>Sourcing Solutions<i>|</i>Delivering Value</p>
+    <p class="intro-tag" data-i18n-html="intro_tag">Connecting Markets<i>|</i>Sourcing Solutions<i>|</i>Delivering Value</p>
+    <div class="intro-lang">
+      <span class="intro-lang-label"><span>Choose your language</span><i aria-hidden="true">·</i><span>Escolha o idioma</span></span>
+      <div class="lang lang-lg" role="group" aria-label="Language / Idioma">
+        <button type="button" class="on" data-lang="en"><b>EN</b> English</button>
+        <button type="button" data-lang="pt"><b>PT</b> Português</button>
+      </div>
+    </div>
     <button class="btn btn-gold" id="introEnter" type="button"><span data-i18n="enter">Enter Site</span><svg><use href="#i-arrow"/></svg></button>
   </div>
 
@@ -175,7 +182,7 @@
     <div class="section-head reveal">
       <span class="eyebrow" data-i18n="prod_eyebrow">Popular Product Categories</span>
       <h2 data-i18n="prod_title">What We Source</h2>
-      <p data-i18n="prod_lede">From a single pallet to full container loads, these are the categories our clients order most.</p>
+      <p data-i18n="prod_lede_home">From a single pallet to full container loads, these are the categories our clients order most. We also supply racing parts, help you buy any car you want and order on Temu for you.</p>
     </div>
     <div class="products-grid">
       <a href="contact.html?product=Building+Materials" class="product reveal" data-product="Building Materials"><div class="photo"><img loading="lazy" src="assets/images/building-materials-steel-pipes.jpg" alt="Stack of steel pipes"></div><div class="product-label"><span class="hs">Steel · Cement · Roofing</span><h3 data-i18n="p1">Building Materials</h3><span class="more"><span data-i18n="view">View products</span> →</span></div></a>
@@ -184,6 +191,9 @@
       <a href="contact.html?product=Industrial+Equipment" class="product reveal" data-product="Industrial Equipment"><div class="photo"><img loading="lazy" src="assets/images/industrial-transformer.jpg" alt="Electrical transformer in a substation"></div><div class="product-label"><span class="hs">Generators · Pumps · Plant</span><h3 data-i18n="p4">Industrial Equipment</h3><span class="more"><span data-i18n="view">View products</span> →</span></div></a>
       <a href="contact.html?product=Agriculture" class="product reveal" data-product="Agriculture"><div class="photo"><img loading="lazy" src="assets/images/agriculture-tractor.jpg" alt="Green tractor in a grass field"></div><div class="product-label"><span class="hs">Machinery · Irrigation · Inputs</span><h3 data-i18n="p5">Agriculture</h3><span class="more"><span data-i18n="view">View products</span> →</span></div></a>
       <a href="contact.html?product=General+Supplies" class="product reveal" data-product="General Supplies"><div class="photo"><img loading="lazy" src="assets/images/general-supplies-warehouse.jpg" alt="Cardboard boxes on warehouse racks"></div><div class="product-label"><span class="hs">FMCG · Packaging · Office</span><h3 data-i18n="p6">General Supplies</h3><span class="more"><span data-i18n="view">View products</span> →</span></div></a>
+      <a href="contact.html?product=Racing+Parts" class="product reveal" data-product="Racing Parts"><div class="photo"><img loading="lazy" src="assets/images/racing-parts.jpg" alt="Engine pistons and connecting rods"></div><div class="product-label"><span class="hs">Engine · Brakes · Performance</span><h3 data-i18n="p7">Racing Parts</h3><span class="more"><span data-i18n="view">View products</span> →</span></div></a>
+      <a href="contact.html?product=Car+Buying+Assistance" class="product reveal" data-product="Car Buying Assistance"><div class="photo"><img loading="lazy" src="assets/images/car-showroom.jpg" alt="White car parked in a showroom"></div><div class="product-label"><span class="hs">Any make · Any model · Imported</span><h3 data-i18n="p8">Car Buying Assistance</h3><span class="more"><span data-i18n="view">View products</span> →</span></div></a>
+      <a href="contact.html?product=Temu+Orders" class="product reveal" data-product="Temu Orders"><div class="photo"><img loading="lazy" src="assets/images/temu-delivery-parcel.jpg" alt="Delivery parcel box on a table"></div><div class="product-label"><span class="hs">Ordered · Checked · Delivered</span><h3 data-i18n="p9">We Order on Temu</h3><span class="more"><span data-i18n="view">View products</span> →</span></div></a>
     </div>
     <div class="products-cta reveal"><a href="contact.html" class="btn btn-outline-navy"><span data-i18n="more_products">Ask About Another Product</span><svg><use href="#i-arrow"/></svg></a></div>
   </div>
@@ -215,7 +225,7 @@
     </div>
     <div class="cta-actions reveal">
       <a href="contact.html" class="btn btn-gold"><span data-i18n="quote">Request a Quote</span><svg><use href="#i-send"/></svg></a>
-      <a href="https://wa.me/27620054157" target="_blank" rel="noopener" class="btn btn-outline-light"><span>WhatsApp Us</span><svg><use href="#i-arrow"/></svg></a>
+      <a href="https://wa.me/27716682694" target="_blank" rel="noopener" class="btn btn-outline-light"><span>WhatsApp Us</span><svg><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -234,7 +244,7 @@
     </div>
     <div>
       <h4 data-i18n="ft_offices">Offices</h4>
-      <ul><li><b style="color:#fff">South Africa</b><br>Address to be confirmed</li> <li>+27 668 2694</li><li><b style="color:#fff">Mozambique</b><br>Matola, Mozambique</li></ul>
+      <ul><li><b style="color:#fff">South Africa</b><br>Address to be confirmed<br>+27 71 668 2694</li><li><b style="color:#fff">Mozambique</b><br>Matola, Mozambique<br><span class="soon" data-i18n="mz_phone">Phone number coming soon</span></li></ul>
     </div>
     <div>
       <h4 data-i18n="ft_follow">Follow Us</h4>

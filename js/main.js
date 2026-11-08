@@ -43,7 +43,15 @@
       });
       $("#introEnter").addEventListener("click", closeIntro);
       $("#introSkip").addEventListener("click", closeIntro);
-      setTimeout(closeIntro, reduceMotion ? 1200 : 3700);
+      var introTimer = setTimeout(closeIntro, reduceMotion ? 1500 : 6000);
+      /* Choosing a language on the welcome screen switches the site, then opens it */
+      $$("#intro .lang button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          clearTimeout(introTimer);
+          setLang(b.dataset.lang);
+          setTimeout(closeIntro, reduceMotion ? 100 : 650);
+        });
+      });
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeIntro(); });
     }
   }
@@ -247,7 +255,7 @@
     var text = "Quote request – Africontinent Global%0A" +
       encodeURIComponent("Name: " + d.name + (d.company ? " (" + d.company + ")" : "") + "\nEmail: " + d.email +
       (d.phone ? "\nPhone: " + d.phone : "") + "\nCategory: " + d.product + "\n\n" + d.message);
-    var url = "https://wa.me/27620054157?text=" + text;
+    var url = "https://wa.me/27716682694?text=" + text;
     showToast(T("toast").replace("{name}", escapeHtml(d.name.split(" ")[0])) +
       ' <a href="' + url + '" target="_blank" rel="noopener" style="color:var(--gold-hi);font-weight:600">' + T("toast_link") + "</a>");
   });
@@ -295,6 +303,12 @@
       off_e: "Onde Estamos", off_t: "Dois Escritórios, Um Corredor", off_l: "As nossas equipas dos dois lados da fronteira mantêm a sua encomenda em movimento.",
       hd_e: "O Que Tratamos", hd_t: "Cada documento, cada etapa", hd_l: "Comprar além-fronteiras envolve papelada e muitas partes. Nós tratamos de tudo.",
       faq_e: "Perguntas", faq_t: "Perguntas Frequentes",
+      intro_tag: "Ligamos Mercados<i>|</i>Encontramos Soluções<i>|</i>Entregamos Valor", skip: "Saltar ›",
+      mz_phone: "Número de telefone em breve",
+      p7: "Peças de Competição", p7d: "Fornecemos peças de competição e desempenho para pista, arrancadas e rua, compradas localmente ou importadas de marcas de confiança.",
+      p8: "Ajuda na Compra de Viaturas", p8d: "Ajudamos a comprar qualquer carro que deseje. Diga-nos a marca, o modelo, o ano e o orçamento, e nós encontramos, verificamos, negociamos o preço e tratamos da entrega.",
+      p9: "Encomendamos na Temu", p9d: "Encontrou algo na Temu? Envie-nos o link. Fazemos a encomenda por si, recebemos e verificamos as encomendas e entregamos à sua porta, também além-fronteiras.",
+      prod_lede_home: "De uma palete a contentores completos, estas são as categorias mais pedidas. Também fornecemos peças de competição, ajudamos a comprar qualquer carro e encomendamos na Temu por si.",
       e_name: "Introduza o seu nome.", e_email: "Introduza um email válido, por ex. nome@empresa.com.", e_phone: "Use apenas números, espaços e +.", e_product: "Escolha uma categoria.", e_message: "Descreva o pedido em pelo menos 10 caracteres.",
       toast: "Obrigado, {name}. O seu pedido está pronto.", toast_link: "Enviar por WhatsApp →"
     },
